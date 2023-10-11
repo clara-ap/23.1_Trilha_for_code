@@ -1,6 +1,7 @@
 # pedra, papel e tesoura melhor de 5
-# editar pra ver os resultados a cada rodada e mostrar os pontos no final
+# tentar colocar um tratamento de excecao
 from random import choice
+
 pontosDoJogador = 0 
 pontosDoBot = 0 
 rodada = 0
@@ -12,6 +13,7 @@ while rodada != 5:
     opcoes = ['pedra','papel','tesoura']
 
     escolhaDoBot = choice(opcoes)
+    print(f'\nJOGADOR: {escolhaDoJogador}\nBOT: {escolhaDoBot}')
 
     if escolhaDoBot == escolhaDoJogador:
         pontosDoJogador += 1
@@ -35,7 +37,9 @@ while rodada != 5:
     elif escolhaDoBot == 'papel' and escolhaDoJogador == 'pedra':
         pontosDoBot += 1
     
+    print(f'\n    JOGADOR    vs    BOT\n       {pontosDoJogador}              {pontosDoBot}\n')
     rodada += 1
+
 
 if pontosDoBot > pontosDoJogador:
     print('VOCÊ PERDEU :(')
