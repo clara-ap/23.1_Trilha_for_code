@@ -1,5 +1,4 @@
 # pedra, papel e tesoura melhor de 5
-# tentar colocar um tratamento de excecao
 from random import choice
 
 pontosDoJogador = 0 
